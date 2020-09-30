@@ -36,6 +36,7 @@ function App() {
   if (showscore)
     return (<div className="question-container">
       <h3>Quiz Completed<br /><br />Your Score is {score} out of {quiz.length}</h3>
+      <button className="submit-btn" onClick={() => window.location.reload(false)}>Restart Quiz</button>
     </div>)
 
   if (!quiz.length)
@@ -43,11 +44,11 @@ function App() {
 
   return (
     <div className="App">
-            <Quizcard
-              options={quiz[currentQuiz].option}
-              question={quiz[currentQuiz].question}
-              callback={handleSubmit}
-            />
+      <Quizcard
+        options={quiz[currentQuiz].option}
+        question={quiz[currentQuiz].question}
+        callback={handleSubmit}
+      />
     </div>
   );
 }
