@@ -1,38 +1,42 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
+.question-container {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+  font-family: Epilogue;
+  background-color: whitesmoke;
+  padding: 20px;
+  margin: 0;
+  box-shadow: 7px 7px 10px gray;
   text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-container .question {
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+.choices-container label input {
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.submit-btn {
+  width: 100%;
+  height: 30px;
+  margin: 20px 0;
+  background-color: #333;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline-style: none;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit-btn:hover {
+  color: cyan;
+  transition: 1s linear;
 }
