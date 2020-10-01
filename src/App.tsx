@@ -17,15 +17,12 @@ function App() {
     }
     fetchData();
   }, [])
-
   const handleSubmit = (e: React.FormEvent<EventTarget>, userAns: string) => {
     e.preventDefault()
 
-
-
     const currectAns: quesType = quiz[currentQuiz];
     if (userAns === currectAns.correct_answer) {
-      setScore(score++)
+      setScore(++score)
     }
 
     if (currentQuiz !== quiz.length - 1) setCurrentQuiz(++currentQuiz)
@@ -38,7 +35,6 @@ function App() {
       <h3>Quiz Completed<br /><br />Your Score is {score} out of {quiz.length}</h3>
       <button className="submit-btn" onClick={() => window.location.reload(false)}>Restart Quiz</button>
     </div>)
-
   if (!quiz.length)
     return (<h1 className="question-container">Loading...</h1>)
 
